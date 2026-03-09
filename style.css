@@ -5,7 +5,7 @@
 
 /* Root Variables */
 :root {
-    --primary-color: #0066cc;
+    --primary-color: #0f0050;
     --secondary-color: #00aa66;
     --accent-color: #ff6b35;
     --dark-color: #1a1a1a;
@@ -39,7 +39,6 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 
 /* ============================
@@ -47,10 +46,9 @@ body {
    ============================ */
 
 .navbar {
-    background: linear-gradient(135deg, var(--primary-color) 0%, #9678ff 100%);
+    background: linear-gradient(135deg, var(--primary-color) 10%, #191330 100%);
     color: white;
-    padding: 10px 0;
-    box-shadow: 0 2px 10px rgba(0, 102, 204, 0.2);
+    box-shadow: 0 2px 10px rgba(0, 128, 64, 0.2);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -62,8 +60,8 @@ body {
 }
 
 .logo {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     object-fit: contain;
 }
 
