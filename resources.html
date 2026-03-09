@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - Hand Hygiene Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>Hand Hygiene Portal</h1>
+                <p class="nav-subtitle">NCM 110L - Nursing Informatics Laboratory</p>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="modules.html">Learning Modules</a></li>
+                <li><a href="resources.html" class="active">Resources</a></li>
+                <li><a href="quiz.html">Quizzes</a></li>
+                <li><a href="index.html#discussion">Discussion</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Learning Resources</h2>
+            <p>Access evidence-based guidelines, infographics, and reference materials</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- WHO Guidelines Section -->
+        <section class="resource-section">
+            <h3>WHO Guidelines & Evidence</h3>
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <h4>WHO 5 Moments for Hand Hygiene</h4>
+                    <p>The cornerstone framework that defines when healthcare workers should perform hand hygiene during patient care activities.</p>
+                    <div class="resource-highlights">
+                        <ul>
+                            <li>Clear definitions of each moment</li>
+                            <li>Visual flowcharts</li>
+                            <li>Implementation strategies</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-secondary" onclick="downloadResource('WHO-5-Moments')">Download Guide</button>
+                </div>
+
+                <div class="resource-card">
+                    <h4>Hand Hygiene Compliance Monitoring</h4>
+                    <p>Tools and methodologies recommended by WHO for tracking and improving hand hygiene compliance in healthcare facilities.</p>
+                    <div class="resource-highlights">
+                        <ul>
+                            <li>Observation tools</li>
+                            <li>Data collection methods</li>
+                            <li>Benchmarking standards</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-secondary" onclick="downloadResource('Compliance-Monitoring')">Download Guide</button>
+                </div>
+
+                <div class="resource-card">
+                    <h4>Preventing Healthcare-Associated Infections</h4>
+                    <p>Comprehensive WHO resource on infection prevention and control practices, with hand hygiene as the foundation.</p>
+                    <div class="resource-highlights">
+                        <ul>
+                            <li>Evidence-based practices</li>
+                            <li>Risk assessment tools</li>
+                            <li>Quality improvement strategies</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-secondary" onclick="downloadResource('HAI-Prevention')">Download Guide</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CDC Guidelines Section -->
+        <section class="resource-section">
+            <h3>CDC Hand Hygiene Recommendations</h3>
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <h4>Handwashing Guidelines for Healthcare Workers</h4>
+                    <p>Evidence-based recommendations from the CDC on when and how to perform effective handwashing in clinical settings.</p>
+                    <div class="resource-highlights">
+                        <ul>
+                            <li>When to use soap & water</li>
+                            <li>Product recommendations</li>
+                            <li>Special circumstances</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-secondary" onclick="downloadResource('CDC-Handwashing')">Download Guide</button>
+                </div>
+
+                <div class="resource-card">
+                    <h4>Hand Sanitizer Efficacy</h4>
+                    <p>CDC guidance on alcohol-based hand sanitizers, including product selection and proper use in healthcare.</p>
+                    <div class="resource-highlights">
+                        <ul>
+                            <li>Minimum alcohol concentration</li>
+                            <li>Effectiveness data</li>
+                            <li>Proper application methods</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-secondary" onclick="downloadResource('CDC-Sanitizers')">Download Guide</button>
+                </div>
+
+                <div class="resource-card">
+                    <h4>Healthcare Personnel Health</h4>
+                    <p>CDC guidelines on protecting healthcare workers, including occupational exposure to bloodborne pathogens and post-exposure protocols.</p>
+                    <div class="resource-highlights">
+                        <ul>
+                            <li>PPE requirements</li>
+                            <li>Exposure prevention</li>
+                            <li>Post-exposure care</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-secondary" onclick="downloadResource('CDC-Personnel-Health')">Download Guide</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Infographics Section -->
+        <section class="resource-section">
+            <h3>Visual Learning Materials</h3>
+            <div class="infographic-grid">
+                <div class="infographic-card">
+                    <div class="infographic-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <p>Handwashing Steps Infographic</p>
+                    </div>
+                    <h4>7-Step Handwashing Technique</h4>
+                    <p>Visual guide showing proper sequence of handwashing steps</p>
+                    <button class="btn btn-secondary" onclick="downloadResource('Infographic-Handwashing')">Download</button>
+                </div>
+
+                <div class="infographic-card">
+                    <div class="infographic-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <p>Hand Rub Technique Infographic</p>
+                    </div>
+                    <h4>6-Step Hand Rub Technique</h4>
+                    <p>Visual demonstration of alcohol-based hand rub application</p>
+                    <button class="btn btn-secondary" onclick="downloadResource('Infographic-Hand-Rub')">Download</button>
+                </div>
+
+                <div class="infographic-card">
+                    <div class="infographic-placeholder" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <p>5 Moments Poster</p>
+                    </div>
+                    <h4>The 5 Moments for Hand Hygiene</h4>
+                    <p>Poster for facility display showing critical hand hygiene moments</p>
+                    <button class="btn btn-secondary" onclick="downloadResource('Poster-5-Moments')">Download</button>
+                </div>
+
+                <div class="infographic-card">
+                    <div class="infographic-placeholder" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                        <p>Missed Spots Infographic</p>
+                    </div>
+                    <h4>Commonly Missed Areas</h4>
+                    <p>Visual guide highlighting areas frequently missed during hand hygiene</p>
+                    <button class="btn btn-secondary" onclick="downloadResource('Infographic-Missed-Spots')">Download</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Printable Posters -->
+        <section class="resource-section">
+            <h3>Printable Posters</h3>
+            <div class="posters-list">
+                <div class="poster-item">
+                    <h4>Clinical Practice Scenarios Poster</h4>
+                    <p>Real-life scenarios showing when to perform hand hygiene in clinical practice. Perfect for displaying in patient care areas.</p>
+                    <button class="btn btn-secondary" onclick="downloadResource('Poster-Scenarios')">Download (A3)</button>
+                </div>
+
+                <div class="poster-item">
+                    <h4>Step-by-Step Handwashing Poster</h4>
+                    <p>Large format visual guide for handwashing. Suitable for bathrooms, sinks, and clinical areas.</p>
+                    <button class="btn btn-secondary" onclick="downloadResource('Poster-Steps')">Download (A2)</button>
+                </div>
+
+                <div class="poster-item">
+                    <h4>Duration Timer Poster</h4>
+                    <p>Visual reminder that effective handwashing takes 20-40 seconds. Great for teaching students and patients.</p>
+                    <button class="btn btn-secondary" onclick="downloadResource('Poster-Duration')">Download (A3)</button>
+                </div>
+
+                <div class="poster-item">
+                    <h4>Hand Hygiene Compliance Reminder</h4>
+                    <p>Motivational poster emphasizing the importance of hand hygiene for patient safety and HAI prevention.</p>
+                    <button class="btn btn-secondary" onclick="downloadResource('Poster-Compliance')">Download (A3)</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Resources -->
+        <section class="resource-section">
+            <h3>Video Demonstrations</h3>
+            <p>Watch expert demonstrations of proper hand hygiene techniques:</p>
+            <div class="videos-grid">
+                <div class="video-card">
+                    <div class="video-placeholder">
+                        <p>Video: Proper Handwashing Technique</p>
+                    </div>
+                    <h4>How to Wash Hands Correctly</h4>
+                    <p>Step-by-step video showing all 7 steps of proper handwashing with soap and water. Duration: 2 minutes</p>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-placeholder">
+                        <p>Video: Alcohol-Based Hand Rub</p>
+                    </div>
+                    <h4>Proper Hand Rub Technique</h4>
+                    <p>Demonstration of correct 6-step technique for using alcohol-based hand sanitizers. Duration: 1.5 minutes</p>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-placeholder">
+                        <p>Video: The 5 Moments</p>
+                    </div>
+                    <h4>Understanding the 5 Moments</h4>
+                    <p>Interactive video explaining when each of the 5 critical moments occurs in patient care. Duration: 3 minutes</p>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-placeholder">
+                        <p>Video: Clinical Scenarios</p>
+                    </div>
+                    <h4>Real-Life Clinical Scenarios</h4>
+                    <p>Case studies showing proper hand hygiene application in various clinical situations. Duration: 4 minutes</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- References Section -->
+        <section class="resource-section">
+            <h3>Evidence-Based References</h3>
+            <div class="references">
+                <h4>Primary Sources:</h4>
+                <ul class="references-list">
+                    <li>WHO (2009). WHO Guidelines on Hand Hygiene in Health Care: First Global Patient Safety Challenge Clean Care is Safer Care. World Health Organization.</li>
+                    <li>CDC (2002). Guideline for Hand Hygiene in Health-Care Settings. Centers for Disease Control and Prevention.</li>
+                    <li>Pittet, D., Allegranzi, B., & Boyce, J. (2009). World Health Organization World Alliance for Patient Safety. The Lancet, 373(9649), 1269-1271.</li>
+                </ul>
+
+                <h4>Additional Resources:</h4>
+                <ul class="references-list">
+                    <li>Institute for Healthcare Improvement (IHI) - Hand Hygiene Resources</li>
+                    <li>Joint Commission - Hand Hygiene Compliance Standards</li>
+                    <li>Association for Professionals in Infection Control and Epidemiology (APIC)</li>
+                    <li>National Nosocomial Infections Surveillance (NNIS) System</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Navigation Buttons -->
+        <section class="module-nav">
+            <a href="modules.html" class="btn btn-secondary">← Back to Modules</a>
+            <a href="quiz.html" class="btn btn-primary">Take Assessment →</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Institution</h4>
+                    <p>Batangas State University<br>College of Health Sciences<br>NCM 110L - Nursing Informatics Laboratory</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Source</h4>
+                    <p>Content based on WHO and CDC Hand Hygiene Guidelines</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Instructor</h4>
+                    <p>Prepared by: Cynthia P. Hernandez, RN, MAN</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Hand Hygiene Educational Portal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

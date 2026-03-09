@@ -1,0 +1,9 @@
+{
+  "name": "hand-hygiene-portal",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Hand Hygiene Educational Portal for Nursing Students",
+  "scripts": {
+    "dev": "python -m http.server 8000"
+  }
+}

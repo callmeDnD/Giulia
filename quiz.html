@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizzes & Self-Assessment - Hand Hygiene Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>Hand Hygiene Portal</h1>
+                <p class="nav-subtitle">NCM 110L - Nursing Informatics Laboratory</p>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="modules.html">Learning Modules</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="quiz.html" class="active">Quizzes</a></li>
+                <li><a href="index.html#discussion">Discussion</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Test Your Knowledge</h2>
+            <p>Assess your understanding of hand hygiene principles and techniques</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- Quiz Selection -->
+        <section class="quiz-section" id="quizSelection">
+            <h3>Choose a Quiz</h3>
+            <div class="quiz-options">
+                <button class="quiz-option" onclick="startQuiz('quick')">
+                    <h4>Quick Knowledge Check</h4>
+                    <p>5 questions | 2-3 minutes</p>
+                    <span class="quiz-level">Beginner</span>
+                </button>
+                <button class="quiz-option" onclick="startQuiz('comprehensive')">
+                    <h4>Comprehensive Assessment</h4>
+                    <p>15 questions | 10-15 minutes</p>
+                    <span class="quiz-level">Intermediate</span>
+                </button>
+                <button class="quiz-option" onclick="startQuiz('clinical')">
+                    <h4>Clinical Scenarios</h4>
+                    <p>8 scenario-based questions | 12-15 minutes</p>
+                    <span class="quiz-level">Advanced</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Quiz Container -->
+        <section class="quiz-section" id="quizContainer" style="display: none;">
+            <div class="quiz-header">
+                <div class="quiz-progress">
+                    <span id="currentQuestion">Question 1</span> of <span id="totalQuestions">5</span>
+                </div>
+                <div class="progress-bar">
+                    <div id="progressFill" class="progress-fill"></div>
+                </div>
+            </div>
+
+            <div class="quiz-content">
+                <h4 id="questionText"></h4>
+                <div id="answersContainer"></div>
+            </div>
+
+            <div class="quiz-navigation">
+                <button class="btn btn-secondary" onclick="previousQuestion()" id="prevBtn">← Previous</button>
+                <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">Next →</button>
+                <button class="btn btn-success" onclick="submitQuiz()" id="submitBtn" style="display: none;">Submit Quiz</button>
+            </div>
+
+            <div class="quiz-feedback" id="quizFeedback" style="display: none;"></div>
+        </section>
+
+        <!-- Results Container -->
+        <section class="quiz-section" id="resultsContainer" style="display: none;">
+            <h3>Quiz Results</h3>
+            <div class="results-summary">
+                <div class="score-circle">
+                    <div class="score-value">
+                        <span id="scorePercentage">0</span>%
+                    </div>
+                </div>
+                <div class="results-info">
+                    <h4 id="scoreMessage">Great effort!</h4>
+                    <p id="scoreDetails">You answered <span id="correctAnswers">0</span> out of <span id="totalAnswers">0</span> questions correctly.</p>
+                </div>
+            </div>
+
+            <div class="results-breakdown">
+                <h4>Performance Analysis</h4>
+                <div id="resultsDetails"></div>
+            </div>
+
+            <div class="results-recommendations">
+                <h4>Recommendations</h4>
+                <div id="recommendations"></div>
+            </div>
+
+            <div class="results-actions">
+                <button class="btn btn-primary" onclick="retakeQuiz()">Retake Quiz</button>
+                <button class="btn btn-secondary" onclick="goHome()">Back to Home</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Institution</h4>
+                    <p>Batangas State University<br>College of Health Sciences<br>NCM 110L - Nursing Informatics Laboratory</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Source</h4>
+                    <p>Content based on WHO and CDC Hand Hygiene Guidelines</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Instructor</h4>
+                    <p>Prepared by: Cynthia P. Hernandez, RN, MAN</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Hand Hygiene Educational Portal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
