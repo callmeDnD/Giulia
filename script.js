@@ -634,3 +634,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+  // Check if user is logged in
+    const loggedIn = localStorage.getItem('loggedIn');
+
+    if (!loggedIn) {
+        // If not logged in, redirect to login page
+        window.location.href = 'login.html';
+    }
+
+      // Logout functionality
+    document.getElementById('logoutLink').addEventListener('click', function(e) {
+        e.preventDefault();
+        // Clear login status
+        localStorage.removeItem('loggedIn');
+        // Redirect to login page
+        window.location.href = "login.html";
+    });
