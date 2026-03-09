@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback & Discussion - Hand Hygiene Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.12.0/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+   })();
+</script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>Hand Hygiene Portal</h1>
+                <p class="nav-subtitle">NCM 110L - Nursing Informatics Laboratory</p>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="modules.html">Learning Modules</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="quiz.html">Quizzes</a></li>
+                <li><a href="feedback.html" class="active">Feedback & Discussion</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="feedback-section">
+            <h2>Feedback</h2>
+            <p>We value your thoughts! Please share your feedback about the hand hygiene portal.</p>
+            <form id="feedbackForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your email" required>
+
+                <label for="message">Feedback:</label>
+                <textarea id="message" name="message" placeholder="Write your feedback here..." required></textarea>
+
+                <button type="submit" class="btn btn-primary">Submit Feedback</button>
+            </form>
+        </section>
+
+        <section class="discussion-section" id="discussion">
+            <h2>Discussion</h2>
+            <p>Discuss hand hygiene practices and share tips with other students.</p>
+
+            <div class="discussion-container">
+                <div class="discussion-card">
+                    <h4>Jane D.</h4>
+                    <p>Remember to rub between fingers thoroughly every time!</p>
+                </div>
+                <div class="discussion-card">
+                    <h4>Mark A.</h4>
+                    <p>Does using hand rub work as effectively as soap and water?</p>
+                </div>
+                <!-- Add more discussion cards dynamically if needed -->
+            </div>
+
+            <form id="discussionForm">
+                <label for="username">Name:</label>
+                <input type="text" id="username" name="username" placeholder="Your name" required>
+
+                <label for="comment">Comment:</label>
+                <textarea id="comment" name="comment" placeholder="Write your comment here..." required></textarea>
+
+                <button type="submit" class="btn btn-primary">Post Comment</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Hand Hygiene Educational Portal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Feedback form submission
+        document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your feedback!');
+            this.reset();
+        });
+
+        // Discussion form submission
+        document.getElementById('discussionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const comment = document.getElementById('comment').value;
+
+            const discussionContainer = document.querySelector('.discussion-container');
+            const newCard = document.createElement('div');
+            newCard.className = 'discussion-card';
+            newCard.innerHTML = `<h4>${username}</h4><p>${comment}</p>`;
+            discussionContainer.appendChild(newCard);
+
+            this.reset();
+        });
+         // Feedback form submission using EmailJS
+    document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        // Send email via EmailJS
+        emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+            from_name: name,
+            from_email: email,
+            message: message
+        })
+        .then(function(response) {
+            alert('Thank you for your feedback! Your message has been sent.');
+            document.getElementById('feedbackForm').reset();
+            console.log('SUCCESS!', response.status, response.text);
+        }, function(error) {
+            alert('Oops! Something went wrong, please try again.');
+            console.log('FAILED...', error);
+        });
+    });
+
+    // Discussion form submission (local append)
+    document.getElementById('discussionForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const username = document.getElementById('username').value;
+        const comment = document.getElementById('comment').value;
+
+        const discussionContainer = document.querySelector('.discussion-container');
+        const newCard = document.createElement('div');
+        newCard.className = 'discussion-card';
+        newCard.innerHTML = `<h4>${username}</h4><p>${comment}</p>`;
+        discussionContainer.appendChild(newCard);
+
+        this.reset();
+    });
+    </script>
+</body>
+</html>
